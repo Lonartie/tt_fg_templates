@@ -15,7 +15,7 @@ int main() {
    static_assert(!type_is_smaller_than_v<3, float>);
    static_assert(!type_is_smaller_than_v<1, bool>);
 
-   // stringify shall be an alias to a constexpr function that acts just like std::to_string but returns a std::array<char, N>
+   // stringify shall be an alias to a constexpr function that acts just like std::to_string but returns a cstring type
    // types that should be supported are bool, int64_t, uint64_t and float
    static_assert(cstring("1") == stringify<1ull>);
    static_assert(cstring("-1") == stringify<(-1ll)>);
